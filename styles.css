@@ -5,3 +5,72 @@ body{
     font-family: sans-serif;
     color: #0a0a23;
 }
+span[class~="sr-only"]{
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    -webkit-clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    padding: 0;
+    margin: -1px;
+}
+h1{
+    max-width: 37.25rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem;
+}
+h1 .flex{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+h1 .flex span:first-of-type{
+    font-size: 0.7em;
+}
+/*The :first-of-type pseudo-selector is used to target the 
+first element that matches the selector. Create an h1 .flex span:first-of-type 
+selector to target the first span element in your .flex container. 
+Remember that your span elements are reversed, visually, 
+so this will appear to be the second element on the page.
+*/
+h1 .flex span:last-of-type{
+    font-size: 1.2em;
+}
+section{
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 2px solid #d0d0d5;
+}
+#years{
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    position: sticky;
+    color: #fff;
+    background-color: #0a0a23;
+    z-index: 999;
+    /*Ensure your years do not get hidden by setting a 
+    z-index of 999.
+    */
+    margin: 0 -2px;
+    padding: 0.5rem;
+    width: calc(1.25rem + 2px) 0.5rem 0;
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+    /*The calc() function is a CSS function that allows you 
+    to calculate a value based on other values. For example, 
+    you can use it to calculate the width of the viewport 
+    minus the margin of an element:
+    .example {
+    margin: 10px;
+    width: calc(100% - 20px);}
+    */
+}
+#years span[class]{
+    font-weight: bold;
+    width: 4.5rem;
+    text-align: right;
+}
